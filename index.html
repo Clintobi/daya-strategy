@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daya — Supply Chain Finance Playbook</title>
+<title>Daya — Strategy Playbook</title>
 <style>
   :root {
     --bg: #080808;
@@ -35,6 +35,8 @@
   section { margin-bottom: 48px; }
   section h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 16px; }
   section p { font-size: 14px; color: var(--text2); line-height: 1.7; }
+  section ul, section ol { font-size: 14px; color: var(--text2); line-height: 1.7; padding-left: 20px; }
+  section ul li, section ol li { margin-bottom: 6px; }
   .insight-box {
     background: var(--surface);
     border: 1px solid rgba(34,197,94,0.3);
@@ -50,11 +52,7 @@
     color: var(--accent);
     margin-bottom: 8px;
   }
-  .insight-box p {
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.7;
-  }
+  .insight-box p { font-size: 14px; color: var(--text); line-height: 1.7; }
   .partner-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -62,24 +60,10 @@
     padding: 28px;
     margin-bottom: 20px;
   }
-  .partner-card .number {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 4px;
-  }
-  .partner-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    letter-spacing: -0.01em;
-  }
-  .partner-card .why {
-    font-size: 13px;
-    color: var(--text2);
-    margin-bottom: 16px;
-    line-height: 1.6;
-  }
+  .partner-card .number { font-size: 11px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+  .partner-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .partner-card .closes { font-size: 13px; color: var(--text2); margin-bottom: 12px; line-height: 1.6; }
+  .partner-card .why { font-size: 13px; color: var(--text2); margin-bottom: 16px; line-height: 1.6; padding-left: 12px; border-left: 2px solid var(--accent); }
   .contact-row {
     display: flex;
     align-items: center;
@@ -97,12 +81,8 @@
     color: var(--text3);
     min-width: 50px;
   }
-  .contact-row .contact-value {
-    font-size: 12px;
-    color: var(--text);
-  }
+  .contact-row .contact-value { font-size: 12px; color: var(--text); }
   .contact-row .contact-value a { color: var(--blue); text-decoration: none; }
-  .contact-row .contact-value a:hover { text-decoration: underline; }
   .draft-msg {
     background: var(--bg);
     border: 1px solid var(--border);
@@ -114,47 +94,10 @@
     white-space: pre-wrap;
     font-family: inherit;
   }
-  .draft-msg .prompt {
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 12px;
-  }
-  .note {
-    font-size: 12px;
-    color: var(--text2);
-    padding: 12px 16px;
-    background: rgba(34,197,94,0.06);
-    border-left: 2px solid var(--accent);
-    border-radius: 0 6px 6px 0;
-    margin-bottom: 20px;
-  }
-  .closing {
-    border-top: 1px solid var(--border);
-    padding-top: 32px;
-    margin-top: 48px;
-  }
+  .draft-msg .prompt { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 12px; }
+  .closing { border-top: 1px solid var(--border); padding-top: 32px; margin-top: 48px; }
   .closing p { font-size: 13px; color: var(--text2); line-height: 1.7; }
   .closing .sig { margin-top: 16px; font-size: 14px; color: var(--text); }
-  .steps { list-style: none; padding: 0; }
-  .steps li {
-    position: relative;
-    padding: 8px 0 8px 20px;
-    font-size: 13px;
-    color: var(--text2);
-  }
-  .steps li::before {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 16px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
   @media (max-width: 600px) {
     .container { padding: 40px 16px 60px; }
     .header h1 { font-size: 22px; }
@@ -168,7 +111,7 @@
 <div class="header">
   <div class="label">Strategy Playbook</div>
   <h1>Daya</h1>
-  <div class="subtitle">How to turn stablecoin payments into Africa's first supply chain finance product</div>
+  <div class="subtitle">How to own the China-Africa trade corridor in stablecoins</div>
   <div class="meta">
     <span><strong>Prepared for</strong> Ayomide, Daya</span>
     <span><strong>Date</strong> July 2026</span>
@@ -176,124 +119,110 @@
 </div>
 
 <section>
-  <h2>The opportunity you are already sitting on</h2>
-  <p>You have the three things that make supply chain finance work in Africa and almost nobody else has all of them together:</p>
-  <ol style="margin-top:12px; padding-left:20px;">
-    <li style="font-size:14px; color:var(--text2); margin-bottom:8px; line-height:1.7;"><strong style="color:var(--text);">Deep USDC and USDT liquidity.</strong> You mentioned it yourself on X. You can move between Naira and stablecoins at scale.</li>
-    <li style="font-size:14px; color:var(--text2); margin-bottom:8px; line-height:1.7;"><strong style="color:var(--text);">A no-interest credit facility</strong> that already bridges Naira and stablecoins for your users.</li>
-    <li style="font-size:14px; color:var(--text2); margin-bottom:8px; line-height:1.7;"><strong style="color:var(--text);">Direct relationships with importers</strong> at the physical markets where they trade. You are meeting them one on one.</li>
-  </ol>
-  <p style="margin-top:12px;">The importers you are talking to at those markets have the same problem every single day: they pay their Chinese, Indian, and Turkish suppliers upfront in dollars, wait three to six weeks for goods to arrive, and survive on thin margins the whole time. A bank will not lend them working capital because they have no credit history and no collateral the bank recognizes. But you could.</p>
+  <h2>The corridor nobody is closing</h2>
+  <p>Daya already moves money from Nigerian importers to Chinese suppliers in USDC. That is one half of a corridor. The other half, what happens on the Chinese side when the supplier receives the USDC, is still broken. The supplier still needs to convert to CNY. They still deal with correspondent banks. The settlement is still slow.</p>
+  <p style="margin-top:12px;">If Daya closes both ends, you do not just process payments. You own the corridor. And the credit facility you already have is the wedge that makes importers choose your corridor over anyone else's.</p>
+  <p style="margin-top:12px;">Five partners close the loop. None of them are the obvious ones.</p>
 </section>
 
 <section>
-  <div class="insight-box">
-    <div class="label">The move</div>
-    <p>A stablecoin-denominated supply chain credit line for African importers. They draw USDC from Daya, pay their supplier immediately, repay when the goods arrive and sell. Daya earns the spread and builds the most defensible moat in African fintech: a lending relationship with the businesses that move the most volume.</p>
-  </div>
-</section>
-
-<section>
-  <h2>How it works, step by step</h2>
-  <ol class="steps" style="padding-left:0;">
-    <li>Importer places an order with a Chinese supplier. Needs $15,000 in USDC to pay the invoice.</li>
-    <li>Daya extends a $15,000 USDC credit line based on that invoice, a shipping document, and the importer's transaction history on the platform.</li>
-    <li>Daya sends the USDC to the supplier. Settlement takes minutes. No correspondent bank. No SWIFT fee.</li>
-    <li>Goods ship. Three to six weeks later they arrive at the Lagos port or the Kariakoo market.</li>
-    <li>Importer sells the goods, converts the Naira proceeds back through Daya's rails, repays the credit. Daya takes a 2 to 3 percent spread.</li>
-  </ol>
-  <p style="margin-top:16px;">The credit risk is real but it is also containable. You already know these importers. You see their transaction volume. You know their suppliers. The missing piece is the capital to lend and a few partners to make the pipeline airtight.</p>
-</section>
-
-<section>
-  <h2>The partners that make it real</h2>
+  <h2>The partners</h2>
 
   <div class="partner-card">
     <div class="number">01</div>
-    <h3>Circle (USDC)</h3>
-    <div class="why">Circle is aggressively expanding in Africa and has a dedicated grant and partnership program for emerging market use cases. A supply chain credit product denominated in USDC is exactly the kind of real world adoption they fund. They can provide the stablecoin infrastructure, compliance support, and potentially the initial credit facility through their Circle Ventures arm or a revenue share deal.</div>
+    <h3>XTransfer</h3>
+    <div class="closes">Closes the China side. 400,000 Chinese B2B exporters already use XTransfer for multi-currency trade settlement. They are actively exploring stablecoin rails.</div>
+    <div class="why">The logic is this: Daya's importer sends USDC to pay a Chinese supplier. XTransfer receives the USDC on the supplier's behalf and settles in CNY to the supplier's Chinese bank account. Settlement happens in minutes instead of days. No correspondent bank. No SWIFT tracing. The supplier does not need to understand crypto. They just receive CNY in their normal bank account. XTransfer handles the off-ramp on the China side the same way Daya handles the on-ramp on the Nigeria side. Together you have a closed stablecoin corridor between Lagos and Shenzhen and nobody else in Africa has this.</div>
     <div class="contact-row">
       <div class="contact-label">Contact</div>
-      <div class="contact-value">Circle emerging markets team. Start at <a href="https://circle.com/en/contact">circle.com/en/contact</a> and mention the Africa supply chain finance use case. AllianceDAO can also make a warm intro to the Circle Ventures team.</div>
+      <div class="contact-value">Bill Deng, CEO. Company X: <a href="https://x.com/XTransfer">@XTransfer</a>. Start at <a href="https://xtransfer.com">xtransfer.com</a> and request a partnership conversation around Africa-China stablecoin settlement.</div>
     </div>
     <div class="draft-msg">
       <div class="prompt">Message you can send today</div>
-We are building stablecoin payments for African importers at Daya and the next step is supply chain credit. Our users move USDC to pay Chinese and Indian suppliers every day and they wait weeks for goods to clear. A USDC credit line against those invoices turns a payment product into a lending business and it turns USDC from a settlement rail into working capital for the businesses that move the most volume in Africa.
+Daya is a stablecoin payments platform moving USDC from Nigerian importers to Chinese suppliers. We have deep USDC and Naira liquidity and we are processing real trade volume through Lagos markets.
 
-Would love to talk about what a Circle partnership looks like for this, whether that is infrastructure, a grant, or a credit facility conversation.</div>
+The missing piece is the China side. Our importers send USDC but the Chinese supplier still needs CNY in their bank account. We have been watching what XTransfer is doing with cross-border settlement and stablecoin rails and I think there is a direct partnership here. Daya handles the Naira to USDC on-ramp in Nigeria. XTransfer handles the USDC to CNY off-ramp in China. Together we close the corridor end to end.
+
+Would you be open to a conversation about what this looks like?</div>
   </div>
 
   <div class="partner-card">
     <div class="number">02</div>
-    <h3>Goldfinch / Jia</h3>
-    <div class="why">Both are DeFi protocols that specialize in emerging market lending. Goldfinch has deployed over $100M in credit lines to fintechs in emerging markets and Jia just raised to do the same thing with a focus on small business lending in Africa and Asia. They provide the capital pool. You provide the origination, the borrower relationships, and the repayment rails. This is a clean partnership: they supply the USDC, you distribute it to the importers you already know.</div>
+    <h3>BFREE</h3>
+    <div class="closes">Closes the credit risk. BFREE manages distressed loan portfolios and has the deepest data set on informal Nigerian borrowers in the country.</div>
+    <div class="why">The credit facility Daya already offers is the wedge, but it lives or dies on whether you can assess an importer's creditworthiness before extending a line. These importers have no bank credit history. No collateral a bank recognizes. But they do have a history of repaying informal loans, supplier credit, market association dues, mobile money overdrafts. BFREE has this data. They collect and structure it as part of their debt recovery work with Nigerian banks and fintechs. If Daya partners with BFREE, you get credit scores on importers using data nobody else has access to. The importer has never seen a bank loan officer. But BFREE already knows whether they pay their debts.</div>
     <div class="contact-row">
       <div class="contact-label">Contact</div>
-      <div class="contact-value">Goldfinch: <a href="https://goldfinch.finance">goldfinch.finance</a> — submit a borrower application. Jia: <a href="https://jia.xyz">jia.xyz</a> — reach out via their partnership form. AllianceDAO likely knows both teams.</div>
+      <div class="contact-value">Julian Flosbach, CEO. X: <a href="https://x.com/julianflosbach">@julianflosbach</a>. Site: <a href="https://bfree.africa">bfree.africa</a>.</div>
     </div>
     <div class="draft-msg">
       <div class="prompt">Message you can send today</div>
-Daya is a stablecoin payments platform for African businesses with deep USDC and Naira liquidity and direct relationships with importers at physical markets across Lagos. We are building a supply chain credit product where importers draw USDC against invoices to pay suppliers upfront and repay when goods arrive.
+Julian, Daya is building a stablecoin credit facility for Nigerian importers at the physical markets in Lagos. Our borrowers are informal traders with zero bank credit history but years of transaction data on our platform and deep supplier relationships we can verify.
 
-We have the borrowers and the repayment rails. Looking for a capital partner to supply the credit facility. Would love to discuss what a partnership looks like.</div>
+The bottleneck is credit assessment. We need a data layer that tells us whether an importer repays their obligations before we extend a USDC credit line. BFREE has the deepest informal credit data set in Nigeria and I think there is a partnership here. You have the repayment data. We have the borrowers and the rails.
+
+Open to a conversation about what a credit scoring partnership looks like?</div>
   </div>
 
   <div class="partner-card">
     <div class="number">03</div>
-    <h3>OnePort 360 / Binkabi</h3>
-    <div class="why">Supply chain credit lives or dies on whether you can verify the goods are real. OnePort 360 is a Nigerian digital freight platform that tracks containers and provides real-time visibility on shipments. Binkabi is an African agri-commodity trade platform that tokenizes supply chains. Partnering with one of them means Daya can verify that an invoice is backed by actual goods in transit before extending credit. This is the risk management layer that makes the whole product bankable.</div>
+    <h3>Moniepoint</h3>
+    <div class="closes">Closes the physical cash layer. 5 million businesses, N21 trillion processed, POS agents inside the exact markets where Daya's importers trade.</div>
+    <div class="why">Daya's importers live in cash. They receive Naira payments from their buyers in cash at Alaba, at Kariakoo, at Trade Fair. They need to convert that cash into their Daya account before they can send the next USDC payment to China. Right now the conversion step is friction. The importer takes cash, goes to a bank, deposits it, waits for clearing, moves it into Daya. A Moniepoint partnership deletes that step. The importer hands cash to a Moniepoint agent at the same market where they already trade. The agent credits their Daya balance. No bank. No clearing delay. Cash physically enters the Daya ecosystem through Moniepoint's agent network. This is an offline-to-stablecoin bridge and nobody in crypto has built it at scale in Nigeria.</div>
     <div class="contact-row">
       <div class="contact-label">Contact</div>
-      <div class="contact-value">OnePort 360: <a href="https://oneport365.com">oneport365.com</a> — reach out via their contact form. Binkabi: <a href="https://binkabi.io">binkabi.io</a>. Both are Nigerian founded, same market as you.</div>
+      <div class="contact-value">Tosin Eniolorunda, CEO. X: <a href="https://x.com/eniolorunda">@eniolorunda</a>. The warmest path is through your Lattice Fund or AllianceDAO contacts who likely know Moniepoint's investors.</div>
     </div>
     <div class="draft-msg">
       <div class="prompt">Message you can send today</div>
-We are building a supply chain credit product for importers at Daya and the missing piece is real time visibility on whether goods are actually in transit before we extend a credit line. Your freight tracking data would let us verify invoices against live shipments, which is the difference between lending blind and lending against actual cargo.
+Tosin, Daya processes stablecoin payments for importers at the Lagos markets. Our users live in cash. They receive Naira from their buyers in physical cash at Alaba and Trade Fair and they need a way to get that cash onto our platform before they can send their next USDC payment to China.
 
-Would you be open to exploring a data partnership? We have the importers and the stablecoin rails. You have the visibility layer.</div>
+Moniepoint's agent network is already inside those markets. A partnership where importers can deposit Naira into their Daya account through any Moniepoint agent closes the offline-to-digital gap that makes stablecoin adoption hard for physical traders. We handle the USDC rails. You handle the cash entry point. The importer gets a single flow: cash to agent, agent to Naira balance, Naira to USDC, USDC to supplier.
+
+Open to a conversation about what this integration looks like?</div>
   </div>
 
   <div class="partner-card">
     <div class="number">04</div>
-    <h3>Flutterwave (deeper integration)</h3>
-    <div class="why">Flutterwave is already listed as a partner on your site but the integration looks like it stops at payment rails. The supply chain credit product needs something deeper: the ability for importers to receive Naira from their buyers directly into their Daya account through Flutterwave's merchant network, and for Daya to auto debit loan repayments from those incoming payments. This turns Flutterwave from a payment partner into the repayment infrastructure for the credit product.</div>
+    <h3>Bumpa</h3>
+    <div class="closes">Closes the repayment prediction. Bumpa has inventory and sales data on the Nigerian retailers who buy from Daya's importers.</div>
+    <div class="why">The riskiest part of extending credit to an importer is not whether they want to pay you back. It is whether their buyers pay them. The importer gives goods to retailers on credit. The retailers sell to consumers. The retailers pay the importer. The importer repays Daya. If the retailers are slow to sell, the importer is slow to repay. Bumpa has real time inventory and sales data from thousands of Nigerian retail shops, the exact kind of business that buys from Daya's importers. If Daya integrates with Bumpa, you can see downstream sales data. When a batch of imported electronics sells fast through retailers using Bumpa, you know the importer is about to get paid. When inventory sits, you know the repayment is at risk. This is a repayment signal that no bank has.</div>
     <div class="contact-row">
       <div class="contact-label">Contact</div>
-      <div class="contact-value">Your existing Flutterwave relationship manager. Ask about direct debit APIs and merchant settlement integration.</div>
+      <div class="contact-value">Kelvin Umechukwu, CEO. X: <a href="https://x.com/kelvinume">@kelvinume</a>. Site: <a href="https://getbumpa.com">getbumpa.com</a>.</div>
     </div>
     <div class="draft-msg">
       <div class="prompt">Message you can send today</div>
-We are building out supply chain credit at Daya and the repayment flow needs to be tighter than what we have today. Importers repay their credit when their buyers pay them. If we can integrate Flutterwave's merchant settlement so that incoming Naira payments automatically settle against outstanding credit lines, the whole product becomes self liquidating.
+Kelvin, Daya extends USDC credit lines to importers who sell to the same Nigerian retail shops that use Bumpa. Our risk is downstream. When a retailer is slow to sell their inventory, the importer who supplied them is slow to repay us.
 
-Is this something your direct debit or merchant APIs can support? Happy to walk through the flow.</div>
+Bumpa has inventory and sales velocity data on those retailers. I think there is a data partnership here. If we can see when a batch of imported goods is selling fast or slow through Bumpa merchants, we can predict importer repayment with precision that no traditional credit model can match.
+
+Open to exploring what this looks like?</div>
   </div>
 
   <div class="partner-card">
     <div class="number">05</div>
-    <h3>Nestcoin / Bundle Africa</h3>
-    <div class="why">Daya's consumer app is strong but distribution needs more surface area. Nestcoin runs Onboard, a crypto wallet and payments app with a growing African user base. Bundle Africa was the biggest crypto consumer app in Nigeria before shutting down but its user base is still addressable. A distribution partnership puts Daya's stablecoin payment rails in front of thousands of existing crypto users who are already comfortable with digital dollars.</div>
+    <h3>Aries Markets</h3>
+    <div class="closes">Closes the capital supply. Aries is the largest lending protocol on Aptos and Aptos is your investor.</div>
+    <div class="why">The credit facility needs capital to lend. You can raise a debt round, which dilutes and takes months. Or you can tap on-chain USDC pools that already exist. Aries Markets is the largest lending protocol on Aptos with USDC lending pools. Daya is an Aptos portfolio company. A dedicated USDC credit pool on Aries, supplied by Aptos ecosystem liquidity providers who want exposure to African trade finance, is the fastest path to a working credit facility. No debt raise. No bank partnership. No six month negotiation. Just an on-chain pool with transparent terms and Daya as the borrower, using the USDC to originate credit lines for importers and repaying with spread.</div>
     <div class="contact-row">
       <div class="contact-label">Contact</div>
-      <div class="contact-value">Nestcoin: <a href="https://nestcoin.com">nestcoin.com</a>. Yele Bademosi is the founder and active on X. AllianceDAO invested in Nestcoin too so there is a warm path.</div>
+      <div class="contact-value">Aries Markets team. X: <a href="https://x.com/AriesMarkets">@AriesMarkets</a>. Warm intro through your Aptos contact is the move here, since Daya and Aries share the Aptos ecosystem.</div>
     </div>
     <div class="draft-msg">
       <div class="prompt">Message you can send today</div>
-Daya is building stablecoin payment rails for African businesses with deep USDC liquidity and a growing importer base. We are looking for distribution partners to get our rails in front of more users and Onboard feels like a clean fit.
+Aries team, Daya is an Aptos portfolio company building stablecoin payments and credit for Nigerian importers. We are launching a USDC credit facility where importers draw against invoices to pay Chinese suppliers and repay when goods arrive and sell.
 
-Would you be open to exploring a distribution partnership? We have the rails and the liquidity. You have the audience.</div>
+We are looking for a capital partner to supply the USDC pool and I think a dedicated lending pool on Aries is the cleanest structure. Aptos ecosystem LPs get exposure to African trade finance. Daya gets the USDC to originate credit lines. The terms are transparent on-chain. Repayments flow back through the pool with Daya's spread built in.
+
+Would love to discuss what this looks like. Our Aptos contact can make the intro if helpful.</div>
   </div>
 </section>
 
-<section>
-  <h2>The logic of doing this now</h2>
-  <p>Every African fintech is chasing payments. Very few are chasing credit because it is harder and scarier. But credit is where the margins live and it is where the defensibility lives. A payments relationship is transactional. A credit relationship is structural. The importer who owes you money also gives you every new transaction. They do not churn. They bring their friends.</p>
-  <p style="margin-top:12px;">You are already doing the hard part: showing up at the markets, knowing the importers by name, moving their money. The credit piece is a product decision and a capital decision. The product is clear. The capital comes from the partners above.</p>
-  <p style="margin-top:12px;">A $2.4M raise at pre-seed means you have runway to build the right thing, not the fast thing. Supply chain credit is the right thing.</p>
-</section>
-
 <div class="closing">
-  <p>I have been watching what Daya is doing and the thing that stands out is the operational grind. You are at the markets. You know the importers. That is rarer than the tech. The tech almost anyone can build. The trust at Alaba and Kariakoo takes years.</p>
-  <p style="margin-top:12px;">This is what I think the next six months should look like. If any of it is useful I am happy to go deeper. If not, no reply needed.</p>
+  <p>Daya is the only African stablecoin company that has the liquidity, the credit facility, and the physical market relationships all at once. These five partners turn that combination into a closed corridor that nobody else can replicate. XTransfer owns the China off-ramp. BFREE owns the credit assessment on borrowers banks ignore. Moniepoint owns the cash entry point at the markets. Bumpa owns the downstream sales data that predicts repayment. Aries owns the capital supply aligned with your own investors.</p>
+  <p style="margin-top:12px;">Each one is non-obvious. Each one is specific to Daya's exact position. Each one has a named person and a draft message ready to go.</p>
+  <p style="margin-top:12px;">If any of this is useful I am happy to go deeper on the mechanics of any of them.</p>
   <div class="sig">Clinton</div>
 </div>
 
